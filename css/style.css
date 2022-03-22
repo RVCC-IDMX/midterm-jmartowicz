@@ -4,6 +4,7 @@
 body {
 
     background-image: linear-gradient(#765729, black);
+    background-attachment: fixed;
     
 
 }
@@ -15,7 +16,7 @@ body {
     margin-top: 6px;  
     border: 4px solid #886644;
     box-shadow: 5px 5px 20px black inset; 
-    background-color: rgba(255, 255, 255, 0.75)
+    background-color: rgba(255, 255, 255, 0.75);
   
 
 }
@@ -26,10 +27,11 @@ header{
     border-top-right-radius: 40px; 
     text-align:center;
     color: white; 
+    background-size: 100%; 
     font-family: Georgia;
     font-weight: bold; 
-    box-shadow: 10px 10px 30px 10px black inset; 
-    text-shadow: 4px 4px 3px rgba(0.75,0.75,0.75,0.75); 
+    box-shadow: 20px 20px 20px black inset; 
+    text-shadow: 5px 5px 5px black; 
 
     background-image: url(../img/cave.jpg);
 
@@ -91,6 +93,7 @@ main img{
 
 
     float: left; 
+
     padding: 30px; 
     clear: right; 
 }
@@ -117,100 +120,53 @@ nav ul {
     text-align: center;
 }
 
-aside{
 
-    display:block;
-    align-items: center;
-
-    
+.opinion{
+    text-align: center;
 }
 
-aside .submission{
-    
-    display: flex;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px; 
-    align-items: center; 
-   
-    background-color: rgba(255, 255, 255, 0.25);
-
-  
-
-}
-
-aside .submission .opinion{
-
-    display: flex;
-    justify-content: center; 
-    align-items: top; 
-}
-
-aside .submission .signature{
-
-    font-style:italic;
-    display: flex;
-    border: 1px solid black;
-   
+.signature{
     text-align: right;
-    vertical-align: bottom;
-    
-
+    font-style: italic; 
 }
 
-aside h2{
-    grid-column: 1/-1;  
+.submission{
+
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black; 
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
-/*aside #submission{
-
-
-    border: 1rem solid black; 
-    background-color: rgba(255, 255, 255, 0.9)
-
-
-} */
 
 main > p:first-of-type::first-line{
 
-    font-size: 1.5em; 
+    font-size: 130%; 
 
 }
 
 main #cryptogram{
+    text-align: center;
     border: solid black; 
 }
 
 main #cryptogram img{
 
-        
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-
-    
-    float: none; 
-    clear: none; 
-
-
+        width: 80%;
+        max-width: 30rem;
 }
 
 main #cryptogram figcaption{
 
-        display:flex;
-        justify-content: center;
-        align-items: center;
         font-style: italic; 
-      
-        
+       
 }
 
-@media screen and (min-width: 960px){
+@media screen and (min-width: 786px){
 
     header{
 
-        font-size: 20px; 
+        font-size: 3rem; 
     }
 
     aside {
@@ -220,23 +176,23 @@ main #cryptogram figcaption{
 
     }
 
+    aside h2{
+        grid-column: 1/-1;
+
+    }
+
+    aside .signature, aside .opinion{
+
+        text-align: center; 
+    }
+
+
+
 }
 
 @media screen and (min-width:100em){
 
     
-    body{
-        
-        display: grid;
-        grid-template-areas: 
-        "header header header"
-        "main main article"
-        "footer footer footer";
-
-        grid-template-columns: 1fr 120px;
-
-    }
-
 }
 
 
