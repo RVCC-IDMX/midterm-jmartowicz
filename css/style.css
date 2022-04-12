@@ -89,10 +89,11 @@ a:hover{
 }
 
 
-main img{
+#cover{
 
 
     float: left; 
+    width:200px;
 
     padding: 30px; 
     clear: right; 
@@ -147,7 +148,6 @@ main > p:first-of-type::first-line{
 
 main #cryptogram{
     text-align: center;
-    border: solid black; 
 }
 
 main #cryptogram img{
@@ -190,9 +190,54 @@ main #cryptogram figcaption{
 
 }
 
-@media screen and (min-width:100em){
+@media screen and (min-width:1024px){
 
+        body {
+            display:grid;
+            grid-template-columns:2fr 1fr;
+            grid-template-areas: 
+                "header header"
+                "nav    nav"
+                "main   aside"
+                "footer footer";
+
+
+        }
+        header {
+            grid-area:header;
+        }
+        nav {
+            grid-area:nav;
+        }
+        main {
+            grid-area:main;
+        }
+        aside {
+            grid-area:aside;
+        }
+        footer {
+            grid-area:footer;
+        }
+
+        aside{
+
+            display:block;
+        }
     
+}
+
+@media screen and (min-width: 1200px){
+
+        body{
+
+
+            max-width:1200px;
+            margin:auto;
+            
+        }
+
+
+
 }
 
 
